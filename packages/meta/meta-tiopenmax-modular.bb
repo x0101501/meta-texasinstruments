@@ -37,6 +37,7 @@ RDEPENDS = "\
 	tiopenmax-imaadpcmenc \
 	tiopenmax-imagecapturetest \
 	tiopenmax-imagedisplaytest \
+	tiopenmax-inst2 \
 	${@base_contains("DISTRO_FEATURES", "jpegdec", "tiopenmax-jpegdec", "", d)} \
 	${@base_contains("DISTRO_FEATURES", "jpegenc", "tiopenmax-jpegenc", "", d)} \
 	tiopenmax-lcml \
