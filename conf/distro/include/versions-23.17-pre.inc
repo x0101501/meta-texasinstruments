@@ -26,7 +26,7 @@ PREFERRED_VERSION_tidspbridge-bios =		"5.33.02"
 PREFERRED_VERSION_tidspbridge-dllcreate-native =	"23.11"
 
 # baseimage
-PREFERRED_VERSION_baseimage-masterconfig =		"24.x"
+PREFERRED_VERSION_baseimage-masterconfig =		"23.x"
 PREFERRED_VERSION_baseimage-samplerateconverter =       "1.2-P1"
 PREFERRED_VERSION_baseimage-dasf =                      "1.2-P1"
 PREFERRED_VERSION_baseimage-hal =                       "1.2-P1"
