@@ -7,7 +7,6 @@
 # * tiwifi	- Include support for TI's WLAN stack.
 # * tibluetooth	- Include support for TI's Bluetooth and FM stack.
 # * gps		- Include support for TI's GPS
-# * rarv        - Enable readaudio/realvideo codecs
 # * testpatterns - Include OMX test patterns
 
 # The following are standard Poky DISTRO_FEATURES, not specific to
@@ -19,4 +18,4 @@ DISTRO_FEATURES += "alsa bluetooth ext2 irda pcmcia usbgadget usbhost wifi nfs z
 # This is a multimedia-based distribution. We can specify what
 # codecs to enable in this release.
 
-DISTRO_FEATURES += "camera jpegdec jpegenc gfx 720p rarv tibluetooth tiwifi gps"
+DISTRO_FEATURES += "camera jpegdec jpegenc gfx 720p tibluetooth tiwifi gps"
