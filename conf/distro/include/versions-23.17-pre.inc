@@ -134,6 +134,7 @@ PREFERRED_VERSION_tisocketnode-jpegdec =                "3.2"
 PREFERRED_VERSION_tisocketnode-jpegdec-codec =          "3.2"
 PREFERRED_VERSION_tisocketnode-jpegenc =                "3.2"
 PREFERRED_VERSION_tisocketnode-jpegenc-codec =          "3.2"
+PREFERRED_VERSION_tisocketnode-conversions =		"3.2"
 #
 
 # openmax
