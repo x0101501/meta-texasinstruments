@@ -15,7 +15,6 @@ CCASE_PATHCOMPONENT = "linux"
 
 SRC_URI = "\
 	file://3.21-videoencnocore.patch;patch=1 \
-	file://3.21-videoenctestpthread.patch;patch=1 \
 	file://3.21-videoenctestnocore.patch;patch=1 \
 	${@base_contains("DISTRO_FEATURES", "testpatterns", "", "file://remove-patterns.patch;patch=1", d)} \
 	"

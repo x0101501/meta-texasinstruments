@@ -1,5 +1,7 @@
---- tiopenmax-videoenc-3.21/video/src/openmax_il/video_encode/test/Makefile.orig	2009-04-28 12:28:59.000000000 -0500
-+++ tiopenmax-videoenc-3.21/video/src/openmax_il/video_encode/test/Makefile	2009-04-28 12:30:38.000000000 -0500
+Index: tiopenmax-videoenc-3.23-pre/video/src/openmax_il/video_encode/test/Makefile
+===================================================================
+--- tiopenmax-videoenc-3.23-pre.orig/video/src/openmax_il/video_encode/test/Makefile	2009-06-15 23:45:43.000000000 -0500
++++ tiopenmax-videoenc-3.23-pre/video/src/openmax_il/video_encode/test/Makefile	2009-06-17 15:21:44.000000000 -0500
 @@ -17,14 +17,13 @@
      CFLAGS += -DVIDENCTEST_DEBUG 
  endif
