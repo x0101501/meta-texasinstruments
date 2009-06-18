@@ -211,8 +211,8 @@ PREFERRED_VERSION_fmapp = 		"23.16.0"
 PREFERRED_VERSION_gps-navilink =	"23.16.0"
 
 # graphics
-PREFERRED_VERSION_sgx-kernel-module =	"1.3.2.4"
-PREFFERED_VERSION_sgx-lib-noxws =	"1.3.2.4"
+PREFERRED_VERSION_sgx-kernel-module =	"1.3.2.5"
+PREFFERED_VERSION_sgx-lib-noxws =	"1.3.2.5"
 
 # open source dependencies
 PREFERRED_VERSION_gst-plugins-bad =	"0.10.8"
