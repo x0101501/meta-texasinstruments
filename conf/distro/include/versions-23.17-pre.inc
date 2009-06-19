@@ -206,8 +206,8 @@ PREFERRED_VERSION_gst-pyapps =		"5.16"
 
 # connectivity
 PREFERRED_VERSION_wilink = 		"23-16"
-PREFERRED_VERSION_btfm = 		"23.16.0"
-PREFERRED_VERSION_fmapp = 		"23.16.0"
+PREFERRED_VERSION_btfm = 		"23.17.0"
+PREFERRED_VERSION_fmapp = 		"23.17.0"
 PREFERRED_VERSION_gps-navilink =	"23.16.0"
 
 # graphics
