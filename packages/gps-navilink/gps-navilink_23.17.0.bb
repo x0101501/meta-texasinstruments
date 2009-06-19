@@ -17,6 +17,7 @@ COMPATIBLE_MACHINE = "omap-3430(l|s)dp"
 CCASE_SPEC = "%\
 	element /vobs/MCP_Common/... LINUX-WCG-GPS_REL_${PV}%\
 	element /vobs/NaviLink/... LINUX-WCG-GPS_REL_${PV}%\
+	element /vobs/GPS_HOSTSW/... LINUX-WCG-GPS_REL_${PV}%\
 	element * /main/LATEST %\
 	"
  
@@ -25,7 +26,8 @@ CCASE_PATHFETCH = "/vobs/MCP_Common/frame \
 	/vobs/MCP_Common/Platform \
 	/vobs/MCP_Common/inc \
 	/vobs/NaviLink \
-	/vobs/MCP_Common/Platform/os/linux/build/drivers"
+	/vobs/MCP_Common/Platform/os/linux/build/drivers \
+	/vobs/GPS_HOSTSW/Private"
  
 CCASE_PATHCOMPONENT = "vobs"
 CCASE_PATHCOMPONENTS = "0"
