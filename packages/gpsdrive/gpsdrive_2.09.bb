@@ -1,7 +1,7 @@
 DESCRIPTION = "GPS Drive MAP application Bitbake"
 LICENSE = "GPL"
 SECTION = "base"
-PR = "r1"
+PR = "r2"
  
 DEPENDS += "libpcre-native pcre gtk+"
  
