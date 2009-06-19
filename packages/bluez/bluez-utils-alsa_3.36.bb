@@ -1,6 +1,6 @@
 require bluez-utils3.inc
 
-
+PROVIDES = "bluez-utils-alsa"
 DEPENDS += "alsa-lib"
 
 # see bluez-utils3.inc for the explanation of these option
