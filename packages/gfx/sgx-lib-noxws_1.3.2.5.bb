@@ -33,7 +33,7 @@ do_chmod() {
 do_compile() {
 	cd ${S}/src/eurasia/eurasiacon/build/linux/omap3430_linux
 	oe_runmake EURASIAROOT=${S}/src/eurasia KERNELDIR=${STAGING_KERNEL_DIR} \
-		DISCIMAGE=${STAGING_DIR_TARGET} X11ROOT=${prefix} BISON=bison-native-1.875 V=1 SUPPORT_XWS=0
+		DISCIMAGE=${STAGING_DIR_TARGET} X11ROOT=${prefix} BISON=${STAGING_DIR_TARGET}/../i686-linux/usr/local/bin/bison-native-1.875 V=1 SUPPORT_XWS=0
 }
 
 do_install() {
