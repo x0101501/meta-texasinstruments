@@ -50,7 +50,7 @@ RDEPENDS = "\
     tisocketnode-mpeg2 \
     tisocketnode-mpeg4dec \
     tisocketnode-mpeg4enc \
-    tisocketnode-spark \
+    ${@base_contains("DISTRO_FEATURES", "spark", "tisocketnode-spark", "", d)} \    
     tisocketnode-vpp \
     tisocketnode-wmv9 \
     ${@base_contains("DISTRO_FEATURES", "720p", "tisocketnode-mpeg4-720pdec", "", d)} \
