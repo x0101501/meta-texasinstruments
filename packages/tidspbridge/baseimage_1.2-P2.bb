@@ -13,7 +13,10 @@ DEPENDS = "baseimage-avsync \
    baseimage-utils \
    baseimage-masterconfig \
    tidspbridge-samples"
-FILES_${PN}="${base_libdir}/dsp/baseimage.dof"
+FILES_${PN}="\
+	${base_libdir}/dsp/baseimage.dof \
+	${base_libdir}/dsp/baseimage.map \
+	"
 
 require baseimage-system-cspec-${PV}.inc
 
