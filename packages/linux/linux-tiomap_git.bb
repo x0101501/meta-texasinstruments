@@ -26,6 +26,8 @@ SRC_URI += "file://defconfig-omap-3430sdp"
 do_stage_append() {
         install -d ${STAGING_KERNEL_DIR}/arch/arm/plat-omap/include/mach
         install -m 0644 ${S}/arch/arm/plat-omap/include/mach/*.h ${STAGING_KERNEL_DIR}/arch/arm/plat-omap/include/mach
+	mv ${S}/arch/arm/configs/omap_3430sdp_defconfig ${S}/arch/arm/configs/omap_3430sdp_defconfig_ori
+	cp ${WORKDIR}/defconfig-omap-3430sdp ${S}/arch/arm/configs/omap_3430sdp_defconfig
 
 }
 
