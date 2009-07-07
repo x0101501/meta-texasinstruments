@@ -1,0 +1,13 @@
+Index: tiopenmax-ilbcenc-3.23/audio/src/openmax_il/ilbc_enc/tests/Makefile
+===================================================================
+--- tiopenmax-ilbcenc-3.23.orig/audio/src/openmax_il/ilbc_enc/tests/Makefile
++++ tiopenmax-ilbcenc-3.23/audio/src/openmax_il/ilbc_enc/tests/Makefile
+@@ -21,7 +21,7 @@ OBJ=$(SRC:.c=.o)
+ 
+ include $(OMXROOT)/Master.mk
+ 
+-CFLAGS+=-I../inc -I$(OMXINCLUDEDIR) -I$(SYSTEMINCLUDEDIR) -I$(BRIDGEINCLUDEDIR) -I$(GTTOOLSINCDIR) -Wall -ansi -fpic -pipe -DOMAP_2430 -DETEEDN_PATH
++CFLAGS+=-I../inc -I$(OMXINCLUDEDIR) -I$(SYSTEMINCLUDEDIR) -I$(BRIDGEINCLUDEDIR) -I$(GTTOOLSINCDIR) -Wall -fpic -pipe -DOMAP_2430 -DETEEDN_PATH
+ ifeq ($(OMX_DEBUG), 1)
+     CFLAGS += -O0
+ else

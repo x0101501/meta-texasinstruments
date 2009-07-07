@@ -15,6 +15,7 @@ CCASE_PATHCOMPONENT = "linux"
 SRC_URI = "\
 	file://23.14-ilbcencnocore.patch;patch=1 \
 	file://23.14-ilbcencnoincinstall.patch;patch=1 \
+	file://23.17P1-remove-ansi.patch;patch=1 \
 	${@base_contains("DISTRO_FEATURES", "testpatterns", "", "file://remove-patterns.patch;patch=1", d)} \
 	"
 

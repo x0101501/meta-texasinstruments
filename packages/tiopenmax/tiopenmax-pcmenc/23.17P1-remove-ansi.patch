@@ -1,0 +1,13 @@
+Index: tiopenmax-pcmenc-3.23/audio/src/openmax_il/pcm_enc/tests/Makefile
+===================================================================
+--- tiopenmax-pcmenc-3.23.orig/audio/src/openmax_il/pcm_enc/tests/Makefile
++++ tiopenmax-pcmenc-3.23/audio/src/openmax_il/pcm_enc/tests/Makefile
+@@ -19,7 +19,7 @@ OBJ=$(SRC:.c=.o)
+ 
+ include $(OMXROOT)/Master.mk
+ #GTTOOLSINCDIR was added
+-CFLAGS+=-I../inc -I$(OMXINCLUDEDIR) -I$(SYSTEMINCLUDEDIR) -I$(BRIDGEINCLUDEDIR) -I$(GTTOOLSINCDIR) -ansi -Wall -fpic -pipe -DOMAP_2430 -DETEEDN_PATH
++CFLAGS+=-I../inc -I$(OMXINCLUDEDIR) -I$(SYSTEMINCLUDEDIR) -I$(BRIDGEINCLUDEDIR) -I$(GTTOOLSINCDIR) -Wall -fpic -pipe -DOMAP_2430 -DETEEDN_PATH
+ 
+ ifeq ($(OMX_DEBUG), 1)
+     CFLAGS += -O0
