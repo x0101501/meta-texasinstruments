@@ -139,8 +139,8 @@ PREFERRED_VERSION_tisocketnode-conversions =		"3.2"
 #
 
 # openmax
-PREFERRED_PROVIDER_virtual/openmax-il =		"meta-tiopenmax-modular"
-#PREFERRED_PROVIDER_virtual/openmax-il =		"tiopenmax"
+#PREFERRED_PROVIDER_virtual/openmax-il =		"meta-tiopenmax-modular"
+PREFERRED_PROVIDER_virtual/openmax-il =		"tiopenmax"
 PREFERRED_VERSION_tiopenmax =			"3.23"
 PREFERRED_VERSION_tiopenmax-core =		"3.23"
 PREFERRED_VERSION_tiopenmax-clock =		"3.23"
@@ -216,9 +216,11 @@ PREFERRED_VERSION_sgx-kernel-module =	"1.3.2.5"
 PREFFERED_VERSION_sgx-lib-noxws =	"1.3.2.5"
 
 # open source dependencies
-PREFERRED_VERSION_gst-plugins-bad =	"0.10.8"
-PREFERRED_VERSION_gst-plugins-ugly =	"0.10.9"
-PREFERRED_VERSION_gst-plugins-good =	"0.10.7"
+PREFERRED_VERSION_gst-plugins-bad =	"git"
+PREFERRED_VERSION_gst-plugins-ugly =	"git"
+PREFERRED_VERSION_gst-plugins-good =	"git"
+PREFERRED_VERSION_gst-plugins-base =	"git"
+PREFERRED_VERSION_gstreamer = 		"git"
 PREFERRED_VERSION_gst-qtmux =		"svn"
 PREFERRED_VERSION_check =		"0.9.5"
 PREFERRED_VERSION_amrnb =		"7.0.0.2"
