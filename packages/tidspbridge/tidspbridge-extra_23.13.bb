@@ -1,6 +1,6 @@
 DESCRIPTION = "Texas Instruments MPU/DSP Bridge libraries."
 PR = "r1"
-DEPENDS = "tidspbridge-module"
+DEPENDS = "linux-tiomap"
 
 inherit update-rc.d
 
