@@ -18,7 +18,7 @@ SRCREV_pn-linux-tiomap ?= "850ed09bbcda51336c89047c30362ee3a242e863"
 
 # bridge and friends
 #PREFERRED_VERSION_tidspbridge-module =		"23.17-P1"
-PREFERRED_VERSION_tidspbridge-lib =		"23.17-P1"
+PREFERRED_VERSION_tidspbridge-lib =		"23.17-P3"
 PREFERRED_VERSION_tidspbridge-samples =		"4.54"
 PREFERRED_VERSION_tidspbridge-extra =		"23.13"
 PREFERRED_VERSION_tidspbridge-cgt6x =		"6.0.7"
