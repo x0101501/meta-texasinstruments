@@ -23,13 +23,13 @@ DISTRO_FEATURES += "alsa bluetooth ext2 irda pcmcia usbgadget usbhost wifi nfs z
 DISTRO_FEATURES += "camera jpegdec jpegenc"
 
 # Enable Sorenson spark video decoder
-DISTRO_FEATURES += "spark"
+#DISTRO_FEATURES += "spark"
 
 # Enable 3D GFX module and libraries
 #DISTRO_FEATURES += "gfx"
 
 # Enable 720p OpenMAX components
-DISTRO_FEATURES += "720p"
+#DISTRO_FEATURES += "720p"
 
 # Enable support for TI's WLAN stack, Bluetooth and FM stack
 #DISTRO_FEATURES += "tibluetooth tiwifi"

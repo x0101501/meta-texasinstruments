@@ -26,9 +26,10 @@ fi
 start ()
 {
     cd /dspbridge
-    echo -n "Loading up Bridge driver: "
-    /dspbridge/install_bridge /lib/modules/`uname -r`/kernel/drivers/dspbridge/bridgedriver.ko shm_size=0x500000 > /dev/null 2>&1
-    /dspbridge/cexec.out -T $BASEIMAGE > /dev/null 2>&1
+    echo -n "Loading up Bridge drivers: "
+    insmod /lib/modules/`uname -r`/kernel/arch/arm/mach-omap2/dspbridge.ko > /dev/null 2>&1
+    insmod /lib/modules/`uname -r`/kernel/drivers/dsp/bridge/bridgedriver.ko shm_size=0x500000 > /dev/null 2>&1
+    /dspbridge/samples/cexec.out -T $BASEIMAGE > /dev/null 2>&1
     [ $? -eq 0 ] || exit $?
     echo "OK"
     
@@ -51,8 +52,9 @@ stop ()
     killall OMXResourceManager > /dev/null 2>&1
     echo "OK"
 
-    echo -n "Unloading Bridge driver: "
+    echo -n "Unloading Bridge drivers: "
     rmmod bridgedriver > /dev/null 2>&1
+    rmmod dspbridge > /dev/null 2>&1
     echo "OK"
 }
 

@@ -3,7 +3,7 @@ DESCRIPTION = "Texas Instruments MPU Bridge samples."
 LICENSE = "LGPL"
 PR = "r0"
 RDEPENDS = "tidspbridge-samples-dsp"
-DEPENDS = "linux-tiomap"
+DEPENDS = "linux-tiomap tidspbridge-lib tidspbridge-samples-dsp"
 
 FILES_${PN}="/dspbridge"
 
@@ -46,9 +46,10 @@ do_compile() {
 }
 
 do_stage() {
-	cd ${S}/mpu_driver
-	install -d ${STAGING_INCDIR}/dspbridge
-        tar -C inc -cf - . | tar -C ${STAGING_INCDIR}/dspbridge -xvf -	
+        echo "Nothing to stage - stage done by dspbridge-lib"
+#	cd ${S}/mpu_driver
+#	install -d ${STAGING_INCDIR}/dspbridge
+#        tar -C inc -cf - . | tar -C ${STAGING_INCDIR}/dspbridge -xvf -	
 }
 
 do_install() {
