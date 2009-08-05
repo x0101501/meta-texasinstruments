@@ -13,7 +13,10 @@ CCASE_PATHFETCH = "\
 CCASE_PATHCOMPONENTS = 3
 CCASE_PATHCOMPONENT = "linux"
 
-SRC_URI = "file://23.11-mknocore.patch;patch=1"
+SRC_URI = "\
+          file://23.11-mknocore.patch;patch=1 \
+	  file://opp-name-change-for-2.6.31.patch;patch=1 \
+	  "
 
 inherit ccasefetch
 

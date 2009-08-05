@@ -1,0 +1,26 @@
+Index: tiopenmax-resourcemanager-3.23/system/src/openmax_il/resource_manager/resource_activity_monitor/src/Resource_Activity_Monitor.c
+===================================================================
+--- tiopenmax-resourcemanager-3.23.orig/system/src/openmax_il/resource_manager/resource_activity_monitor/src/Resource_Activity_Monitor.c	2009-08-05 18:11:16.000000000 +0200
++++ tiopenmax-resourcemanager-3.23/system/src/openmax_il/resource_manager/resource_activity_monitor/src/Resource_Activity_Monitor.c	2009-08-05 18:12:37.000000000 +0200
+@@ -50,7 +50,7 @@
+     printf("[setting operating point] MHz = %d operatingPoint = %d\n",MHz,operatingPoint);
+     strcpy(command,"echo -n ");
+     strcat(command,ram_itoa(operatingPoint));
+-    strcat(command," > /sys/power/vdd1_opp_value");
++    strcat(command," > /sys/power/vdd1_opp");
+     system(command);
+ #endif    
+ }
+Index: tiopenmax-resourcemanager-3.23/system/src/openmax_il/resource_manager/src/ResourceManager.c
+===================================================================
+--- tiopenmax-resourcemanager-3.23.orig/system/src/openmax_il/resource_manager/src/ResourceManager.c	2009-08-05 18:12:53.000000000 +0200
++++ tiopenmax-resourcemanager-3.23/system/src/openmax_il/resource_manager/src/ResourceManager.c	2009-08-05 18:13:06.000000000 +0200
+@@ -1012,7 +1012,7 @@
+         NumFound = 0;
+ 
+         /* get the ARM maximum operating point */
+-        FILE *fp = fopen("/sys/power/vdd1_opp_value","r");
++        FILE *fp = fopen("/sys/power/vdd1_opp","r");
+         if (fp == NULL) printf("open file failed\n");
+         int op;
+         fscanf(fp, "%d",&op);
