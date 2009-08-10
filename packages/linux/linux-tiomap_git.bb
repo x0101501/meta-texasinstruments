@@ -16,7 +16,10 @@ DEFAULT_PREFERENCE = "1"
 
 # You can supply your own defconfig if you like.  See
 # http://bec-systems.com/oe/html/recipes_sources.html for a full explanation
-SRC_URI += "file://defconfig-omap-3430sdp"
+SRC_URI += " \
+           file://hack-dspbridge-get-clock.patch;patch=1 \
+           file://defconfig-omap-3430sdp \
+  	   "
 
 # work-around for touchscreen problem (remove this when proper soln is found):
 #ADD_DISTRO_FEATURES += "sed -i 's/# CONFIG_INTERCONNECT_IO_POSTING is not set/CONFIG_INTERCONNECT_IO_POSTING=y/' ${S}/.config"
