@@ -18,6 +18,7 @@ DEFAULT_PREFERENCE = "1"
 # http://bec-systems.com/oe/html/recipes_sources.html for a full explanation
 SRC_URI += " \
            file://hack-dspbridge-get-clock.patch;patch=1 \
+           file://touch_screen_fix.patch;patch=1 \
            file://defconfig-omap-3430sdp \
   	   "
 
