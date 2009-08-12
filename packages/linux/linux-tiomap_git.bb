@@ -19,6 +19,7 @@ DEFAULT_PREFERENCE = "1"
 SRC_URI += " \
            file://hack-dspbridge-get-clock.patch;patch=1 \
            file://touch_screen_fix.patch;patch=1 \
+           file://cpuidle.patch;patch=1 \
            file://defconfig-omap-3430sdp \
   	   "
 
