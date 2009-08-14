@@ -11,8 +11,6 @@ COMPATIBLE_MACHINE = "omap-3430(l|s)dp"
 ADD_DISTRO_FEATURES = "	${@base_contains("DISTRO_FEATURES", "720p", "sed -i 's/# CONFIG_FB_OMAP_720P_STREAMING is not set/CONFIG_FB_OMAP_720P_STREAMING=y/' ${S}/.config;", "", d)}"
 
 do_configure_prepend() {
-	mv ${S}/arch/arm/configs/omap_3430sdp_defconfig ${S}/arch/arm/configs/omap_3430sdp_defconfig_ori
-	mv ${WORKDIR}/defconfig-omap-3430sdp ${S}/arch/arm/configs/omap_3430sdp_defconfig
 
 	if [ -f '${WORKDIR}/defconfig-${MACHINE}' ]; then
 		rm -f ${S}/.config || true
