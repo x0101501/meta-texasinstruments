@@ -1,6 +1,7 @@
 DESCRIPTION = "FM radio test app"
 SECTION = "console/multimedia"
 PRIORITY = "optional"
+DEPENDS = "alsa-utils bluez-libs"
 RDEPENDS = "btfm"
 PR = "r0"
 
