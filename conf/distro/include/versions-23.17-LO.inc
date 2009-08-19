@@ -14,7 +14,7 @@ PREFERRED_VERSION_omap-image-sato.bb =			"1.0
 # baseport
 PREFERRED_VERSION_x-load =		"4.62"
 PREFERRED_VERSION_u-boot =		"5.10"
-SRCREV_pn-linux-tiomap ?= "86a3173dfd139d5d410b0d2bc4287a6be716e625"
+SRCREV_pn-linux-tiomap ?= "9e66745091793834f815d0952be73e2f9b57ac5f"
 
 # bridge and friends
 #PREFERRED_VERSION_tidspbridge-module =		"23.17-P1"
