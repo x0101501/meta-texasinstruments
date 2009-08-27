@@ -9,7 +9,7 @@ PV = "2.6+git${SRCREV}"
 S = "${WORKDIR}/git"
 
 
-COMPATIBLE_MACHINE = "omap-3430ldp|omap-3430sdp"
+COMPATIBLE_MACHINE = "omap-3430ldp|omap-3430sdp|zoom2"
 
 DEFAULT_PREFERENCE = "1"
 

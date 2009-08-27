@@ -9,7 +9,9 @@ PARALLEL_MAKE=""
 
 EXTRA_OEMAKE = "CROSS_COMPILE=${TARGET_PREFIX}"
 
-UBOOT_MACHINE ?= "${MACHINE}_config"
+UBOOT_MACHINE_omap-3430ldp = "omap3430labrador_config"
+UBOOT_MACHINE_omap-3430sdp = "omap3430sdp_config"
+UBOOT_MACHINE_zoom2 ="omap3430zoom2_config"
 UBOOT_IMAGE ?= "u-boot-${MACHINE}-${PV}-${PR}.bin"
 UBOOT_SYMLINK ?= "u-boot-${MACHINE}.bin"
 
