@@ -3,4 +3,4 @@
 # baseport
 SRCREV_pn-x-load ?= "8422b561fbd750ccb852f89904bbb9c39e2fac7a"
 SRCREV_pn-u-boot ?= "4edcb22171155ccf615d4b9ee4800606651dc623"
-SRCREV_pn-linux-tiomap ?= "2781528d635724dcf0b6a7ef2f6c0012271e5bba"
+SRCREV_pn-linux-tiomap ?= "bcdcb42163b836a5e1280823774589ddb2f65744"
