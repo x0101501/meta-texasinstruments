@@ -3,4 +3,4 @@
 # baseport
 PREFERRED_VERSION_x-load =             "4.62"
 PREFERRED_VERSION_u-boot =             "5.10"
-SRCREV_pn-linux-tiomap ?= "bcdcb42163b836a5e1280823774589ddb2f65744"
+SRCREV_pn-linux-tiomap ?= "5cd99ca3df1d8a84a1abf134c4ec3e7065f9a985"
