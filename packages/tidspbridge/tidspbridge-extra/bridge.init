@@ -49,7 +49,8 @@ stop ()
     echo -n "Shutting down OpenMAX: "
     killall OMXAudioManager > /dev/null 2>&1
     killall OMXPolicyManager > /dev/null 2>&1
-    killall OMXResourceManager > /dev/null 2>&1
+    # Workaround: disable RM for LO convergence
+    # OMXResourceManager &
     echo "OK"
 
     echo -n "Unloading Bridge drivers: "
