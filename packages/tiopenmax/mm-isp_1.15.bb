@@ -11,6 +11,7 @@ PARALLEL_MAKE = "-j1"
 CCASE_SPEC = "\
 	# MM ISP%\
 	element /vobs/wtbu/OMAPSW_MPU/algo/... LINUX-TID-MMISP_RLS_${PV}%\
+	element /vobs/wtbu/OMAPSW_MPU/linux/mm_isp/camera_algo_frmwk/src/camdriver_interface.c ACT_X0103975-LO-RAHUL%\
 	element /vobs/wtbu/OMAPSW_MPU/linux/mm_isp/... LINUX-TID-MMISP_RLS_${PV}%\
 	element * /main/LATEST%\
 	"
