@@ -19,3 +19,8 @@ CCASE_SPEC = "\
 	# don't pick up anything that is not labeled%\
 	element * /main/0%\
 	"
+
+# Workaround for LO convergence
+# Disable resource manager support
+
+export OMX_RESOURCEMANAGER_DISABLE=1

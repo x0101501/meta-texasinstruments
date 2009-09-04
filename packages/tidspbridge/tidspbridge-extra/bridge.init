@@ -39,7 +39,8 @@ start ()
         echo -n "Launching OMX Managers: "
 	OMXAudioManager &
 	OMXPolicyManager &
-	OMXResourceManager &
+	# Workaround: disable RM for LO convergence
+	# OMXResourceManager &
 	echo "OK"
     fi
 }
