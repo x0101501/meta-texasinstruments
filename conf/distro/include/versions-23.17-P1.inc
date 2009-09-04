@@ -1,5 +1,3 @@
-# Versions common to all machines
-
 # tasks and images
 PREFERRED_VERSION_task-omap-bridge.bb =			"1.0"
 PREFERRED_VERSION_task-omap-connectivity.bb =		"1.0"
@@ -13,11 +11,15 @@ PREFERRED_VERSION_omap-image-minimal.bb =		"1.0"
 PREFERRED_VERSION_omap-image-mm.bb =			"1.0"
 PREFERRED_VERSION_omap-image-sato.bb =			"1.0
 
+# baseport
+PREFERRED_VERSION_x-load =		"4.63"
+PREFERRED_VERSION_u-boot =		"5.11"
+PREFERRED_VERSION_linux-tiomap =	"2.6.24.7-5.25-P3"
+
 # bridge and friends
-#PREFERRED_VERSION_tidspbridge-module =		"23.17-P1"
-PREFERRED_VERSION_tidspbridge-lib =		"23.17-P3"
-PREFERRED_VERSION_tidspbridge-samples =		"23.17-P3"
-PREFERRED_VERSION_tidspbridge-samples-dsp =		"4.54"
+PREFERRED_VERSION_tidspbridge-module =		"23.17-P2"
+PREFERRED_VERSION_tidspbridge-lib =		"23.17-P2"
+PREFERRED_VERSION_tidspbridge-samples =		"4.54"
 PREFERRED_VERSION_tidspbridge-extra =		"23.13"
 PREFERRED_VERSION_tidspbridge-cgt6x =		"6.0.7"
 PREFERRED_VERSION_tidspbridge-bios =		"5.33.02"
@@ -204,13 +206,13 @@ PREFERRED_VERSION_gst-pyapps =		"5.17"
 
 # connectivity
 PREFERRED_VERSION_wilink = 		"23-17"
-PREFERRED_VERSION_btfm = 		"23.17.0"
-PREFERRED_VERSION_fmapp = 		"23.17.0"
+PREFERRED_VERSION_btfm = 		"23.17.1"
+PREFERRED_VERSION_fmapp = 		"23.17.1"
 PREFERRED_VERSION_gps-navilink =	"23.17.0"
 
 # graphics
-PREFERRED_VERSION_sgx-kernel-module =	"1.3.2.5"
-PREFFERED_VERSION_sgx-lib-noxws =	"1.3.2.5"
+PREFERRED_VERSION_sgx-kernel-module =	"1.3.2.6"
+PREFFERED_VERSION_sgx-lib-noxws =	"1.3.2.6"
 
 # open source dependencies
 PREFERRED_VERSION_gst-plugins-bad =	"0.10.8"

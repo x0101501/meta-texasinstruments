@@ -1,5 +1,6 @@
 #SECTION = ""
 DESCRIPTION = "WLAN stack (kernel module, libs, wpa_supplicant)"
+DEPENDS = "virtual/kernel"
 PR = "r1"
 # Note:	This recipe will be broken into many recipes for future releases
 # 	For now this mimics the MCS layout and mini-build system in ClearCase
