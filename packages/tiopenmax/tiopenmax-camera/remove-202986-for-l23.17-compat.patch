@@ -1,0 +1,63 @@
+Index: tiopenmax-camera-3.23/video/src/openmax_il/camera/src/OMX_Camera_Utils.c
+===================================================================
+--- tiopenmax-camera-3.23.orig/video/src/openmax_il/camera/src/OMX_Camera_Utils.c	2009-09-04 18:46:05.000000000 +0200
++++ tiopenmax-camera-3.23/video/src/openmax_il/camera/src/OMX_Camera_Utils.c	2009-09-04 18:47:45.000000000 +0200
+@@ -388,12 +388,14 @@
+         {
+             pCameraBuffer = pPreviewPort->pCameraBuffer[nCount];
+ ///{DR 202986
++/*
+             OMX_CAMERA_PRINTF_L4("mBCapturingMutex Check Lock ..");
+             pthread_mutex_lock(&(pComponentPrivate->mBCapturingMutex));
+ 				        OMX_CAMERA_PRINTF_L4("mBCapturingMutex Locked ..");
+             pComponentPrivate->bCapturing           = OMX_FALSE;
+             pthread_mutex_unlock(&(pComponentPrivate->mBCapturingMutex));
+ 				        OMX_CAMERA_PRINTF_L4("mBCapturingMutex Unlocked ..");
++*/
+ ///}DR 202986
+ 
+             pCameraBuffer->bCaptureFillThisBuffer = OMX_FALSE;
+@@ -3378,16 +3380,19 @@
+ 
+     pComponentPrivate->bFirstCameraBuffer   = OMX_TRUE;
+ ///{DR 202986
++/*
+     OMX_CAMERA_PRINTF_L4("mBCapturingMutex Check Lock .");
+     pthread_mutex_lock(&(pComponentPrivate->mBCapturingMutex));
+ 				OMX_CAMERA_PRINTF_L4("mBCapturingMutex Locked .");
+     pComponentPrivate->bCapturing           = OMX_FALSE;
+     pthread_mutex_unlock(&(pComponentPrivate->mBCapturingMutex));
+ 				OMX_CAMERA_PRINTF_L4("mBCapturingMutex Unlocked .");
++*/
+ ///}DR 202986
+     pComponentPrivate->bAutoPauseAfterCapture = OMX_FALSE;
+     pComponentPrivate->bImageCaptureMode    = OMX_TRUE;
+ ///{DR 202986
++/*
+ 
+ 			 OMX_CAMERA_PRINTF_L4("mFillmBStoppingMutex: Check Lock");
+     pthread_mutex_lock(&(pComponentPrivate->mBStoppingMutex));
+@@ -3396,6 +3401,7 @@
+     pthread_mutex_unlock(&(pComponentPrivate->mBStoppingMutex));
+ 				OMX_CAMERA_PRINTF_L4("mFillmBStoppingMutex: unlocked");
+ 
++*/
+  ///}DR 202986
+     pComponentPrivate->nPreviewBufCount     = 0;
+     pComponentPrivate->nVidCaptureBufCount  = 0;
+@@ -3407,6 +3413,7 @@
+     pComponentPrivate->alg2A = OMX_FALSE;
+  ///{DR 202986
+     /*To process last Capturing process */
++/*
+     OMX_CAMERA_PRINTF_L4("mBLastCapturingBuffers Check Lock");
+     pthread_mutex_lock(&(pComponentPrivate->mBLastCapturingBuffers));
+     OMX_CAMERA_PRINTF_L4("bLastCapturingBuffers Locked");
+@@ -3414,6 +3421,7 @@
+     pComponentPrivate->nLastCapturingBuffers = 0;
+ 				pthread_mutex_unlock(&(pComponentPrivate->mBLastCapturingBuffers));
+     OMX_CAMERA_PRINTF_L4("bLastCapturingBuffers Unlocked");
++*/
+  ///}DR 202986
+     /* Flag for IPP */
+     pComponentPrivate->bIPP = OMX_FALSE;
