@@ -1,7 +1,7 @@
 DEPENDS = "tidspbridge-lib virtual/kernel"
 DESCRIPTION = "Texas Instruments Camera and ISP Algorithms."
 LICENSE = "LGPL"
-PR = "r4"
+PR = "r5"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 PACKAGES = "${PN}-dbg ${PN}-dev ${PN}"
 
@@ -24,7 +24,6 @@ SRC_URI="\
     file://23.11-il3pmk.patch;patch=1 \
     file://23.11-cafmk.patch;patch=1 \
     file://linux-omap.patch;patch=1 \
-    file://mm-isp-linux-types.patch;patch=1 \
 	"
 
 inherit ccasefetch
