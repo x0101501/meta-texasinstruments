@@ -102,11 +102,11 @@ Index: git/gst/gstinfo.c
 +
 +#ifdef GST_LOG_OVER_TTIF
 +static TTIF_TRACE_ARG_PROCESSOR __gst_debug_print_ptr_proc = {
-+  .convert = (char (*)(void *))gst_debug_print_object,
++  .convert = (char * (*)(void *))gst_debug_print_object,
 +  .free    = (void (*)(char *))g_free
 +};
 +static TTIF_TRACE_ARG_PROCESSOR __gst_debug_print_segment_proc = {
-+  .convert = (char (*)(void *))gst_debug_print_segment,
++  .convert = (char * (*)(void *))gst_debug_print_segment,
 +  .free    = (void (*)(char *))g_free
 +};
 +
@@ -115,7 +115,7 @@ Index: git/gst/gstinfo.c
 + * everything.. but it should be removed eventually..
 + */
 +TTIF_TRACE_ARG_PROCESSOR __gst_debug_print_object_proc = {
-+  .convert = (char (*)(void *))gst_debug_print_object,
++  .convert = (char * (*)(void *))gst_debug_print_object,
 +  .free    = (void (*)(char *))g_free
 +};
 +
