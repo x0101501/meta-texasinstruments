@@ -139,8 +139,8 @@ PREFERRED_VERSION_tisocketnode-conversions =		"3.2"
 #
 
 # openmax
-#PREFERRED_PROVIDER_virtual/openmax-il =		"meta-tiopenmax-modular"
-PREFERRED_PROVIDER_virtual/openmax-il =		"tiopenmax"
+PREFERRED_PROVIDER_virtual/openmax-il =		"meta-tiopenmax-modular"
+#PREFERRED_PROVIDER_virtual/openmax-il =		"tiopenmax"
 PREFERRED_VERSION_tiopenmax =			"3.23"
 PREFERRED_VERSION_tiopenmax-core =		"3.23"
 PREFERRED_VERSION_tiopenmax-clock =		"3.23"
