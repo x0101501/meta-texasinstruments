@@ -1,6 +1,6 @@
 DESCRIPTION = "Texas Instruments OpenMAX IL Camera."
 DEPENDS = "tidspbridge-lib tiopenmax-core tiopenmax-lcml tiopenmax-rmproxy tiopenmax-resourcemanager mm-isp tiopenmax-clock"
-PR = "r1"
+PR = "r2"
 PACKAGES = "${PN}-dbg ${PN}-patterns ${PN}-dev ${PN}"
 
 require tiopenmax-cspec-${PV}.inc
@@ -16,7 +16,6 @@ CCASE_PATHCOMPONENT = "linux"
 SRC_URI = "\
 	file://23.14-cameranocore.patch;patch=1 \
 	file://23.14-cameratestnocore.patch;patch=1 \
-	file://remove-202986-for-l23.17-compat.patch;patch=1 \
 	${@base_contains("DISTRO_FEATURES", "testpatterns", "", "file://remove-patterns.patch;patch=1", d)} \
 	"
 
