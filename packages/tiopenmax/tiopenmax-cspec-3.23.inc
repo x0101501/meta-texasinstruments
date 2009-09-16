@@ -3,7 +3,7 @@ CCASE_SPEC = "\
 	# LO Migration Patches%\
 	element /vobs/wtbu/OMAPSW_MPU/... ACT_X0103975-LO-RAHUL%\
 #	element /vobs/wtbu/OMAPSW_MPU/... ACT_X0087450-FIX4ISSUESWITHLOKERNEL%\
-	element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/post_processor/... ACT_VIDEOL23.17RC7%\
+	element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/post_processor/... ACT_VIDEOL23.17RC7-1%\
 	# OMX Audio%\
 	element /vobs/wtbu/OMAPSW_MPU/linux/audio/... LINUX-MMAUDIO_RLS_${PV}P2%\
 	# OMX Video%\
