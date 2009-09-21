@@ -22,7 +22,6 @@ SRC_URI="\
     file://23.11-ippmk.patch;patch=1 \
     file://23.11-il3pmk.patch;patch=1 \
     file://23.11-cafmk.patch;patch=1 \
-    file://linux-omap.patch;patch=1 \
 	"
 
 inherit ccasefetch
