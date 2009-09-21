@@ -16,12 +16,16 @@ CCASE_PATHCOMPONENT = "linux"
 SRC_URI = "\
 	file://23.14-cameranocore.patch;patch=1 \
 	file://23.14-cameratestnocore.patch;patch=1 \
+	file://OMX_Camera.c \
+	file://OMX_Camera_Utils.c \
 	${@base_contains("DISTRO_FEATURES", "testpatterns", "", "file://remove-patterns.patch;patch=1", d)} \
 	"
 
 inherit ccasefetch
 
 do_compile_prepend() {
+	cp -f ${WORKDIR}/OMX_Camera.c ${S}/video/src/openmax_il/camera/src/OMX_Camera.c
+	cp -f ${WORKDIR}/OMX_Camera_Utils.c ${S}/video/src/openmax_il/camera/src/OMX_Camera_Utils.c
 	install -d ${D}/usr/omx/patterns
 	install -d ${D}/usr/lib
 	install -d ${D}/usr/bin
