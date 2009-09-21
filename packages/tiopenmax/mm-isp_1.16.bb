@@ -1,7 +1,7 @@
 DEPENDS = "tidspbridge-lib virtual/kernel"
 DESCRIPTION = "Texas Instruments Camera and ISP Algorithms."
 LICENSE = "LGPL"
-PR = "r5"
+PR = "r1"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 PACKAGES = "${PN}-dbg ${PN}-dev ${PN}"
 
@@ -11,7 +11,6 @@ PARALLEL_MAKE = "-j1"
 CCASE_SPEC = "\
 	# MM ISP%\
 	element /vobs/wtbu/OMAPSW_MPU/algo/... LINUX-TID-MMISP_RLS_${PV}%\
-	element /vobs/wtbu/OMAPSW_MPU/linux/mm_isp/camera_algo_frmwk/src/camdriver_interface.c ACT_X0103975-LO-RAHUL%\
 	element /vobs/wtbu/OMAPSW_MPU/linux/mm_isp/... LINUX-TID-MMISP_RLS_${PV}%\
 	element * /main/LATEST%\
 	"
