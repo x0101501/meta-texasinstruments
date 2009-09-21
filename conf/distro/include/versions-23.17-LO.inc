@@ -201,9 +201,9 @@ PREFERRED_VERSION_tiopenmax-videocapturetest =	"3.23"
 PREFERRED_VERSION_mm-isp =			"1.15"
 
 # gstreamer
-PREFERRED_VERSION_libgoo =		"5.17"
-PREFERRED_VERSION_gst-goo =		"5.17"
-PREFERRED_VERSION_gst-pyapps =		"5.17"
+PREFERRED_VERSION_libgoo =		"5.17m.3"
+PREFERRED_VERSION_gst-goo =		"5.17m.3"
+PREFERRED_VERSION_gst-pyapps =		"5.17M.2"
 
 # connectivity
 PREFERRED_VERSION_wilink = 		"23-17"
@@ -216,9 +216,11 @@ PREFERRED_VERSION_sgx-kernel-module =	"1.3.2.5"
 PREFFERED_VERSION_sgx-lib-noxws =	"1.3.2.5"
 
 # open source dependencies
-PREFERRED_VERSION_gst-plugins-bad =	"0.10.8"
-PREFERRED_VERSION_gst-plugins-ugly =	"0.10.9"
-PREFERRED_VERSION_gst-plugins-good =	"0.10.7"
+PREFERRED_VERSION_gst-plugins-bad =	"git"
+PREFERRED_VERSION_gst-plugins-ugly =	"git"
+PREFERRED_VERSION_gst-plugins-good =	"git"
+PREFERRED_VERSION_gst-plugins-base =	"git"
+PREFERRED_VERSION_gstreamer = 		"git"
 PREFERRED_VERSION_gst-qtmux =		"svn"
 PREFERRED_VERSION_check =		"0.9.5"
 PREFERRED_VERSION_amrnb =		"7.0.0.2"
