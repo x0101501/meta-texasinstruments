@@ -4180,7 +4180,7 @@ OMX_ERRORTYPE SetCameraColorEffect(OMX_CAMERA_COMPONENT_PRIVATE *pComponentPriva
                           "Color effect is not supported!");
     
     /* Retrieve brightness */
-    sControl.id = V4L2_CID_PRIVATE_ISP_COLOR_FX;
+    sControl.id = V4L2_CID_COLORFX;
     sControl.value = pComponentPrivate->nColorEffect;
     OMX_CAMERA_PRINTF_L2("ioctlCamera(VIDIOC_S_CTRL,V4L2_CID_PRIVATE_ISP_COLOR_FX) Set to %d",
                          (int)sControl.value);
