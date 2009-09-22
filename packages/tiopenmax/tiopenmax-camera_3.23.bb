@@ -19,6 +19,7 @@ SRC_URI = "\
 	file://OMX_Camera.c \
 	file://OMX_Camera_Utils.c \
 	${@base_contains("DISTRO_FEATURES", "testpatterns", "", "file://remove-patterns.patch;patch=1", d)} \
+	${@base_contains("MACHINE", "omap-3430sdp", "file://sdp-device.patch;patch=1", "", d)} \
 	"
 
 inherit ccasefetch

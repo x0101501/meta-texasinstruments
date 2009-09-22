@@ -22,7 +22,8 @@ SRC_URI="\
     file://23.11-ippmk.patch;patch=1 \
     file://23.11-il3pmk.patch;patch=1 \
     file://23.11-cafmk.patch;patch=1 \
-	"
+    ${@base_contains("MACHINE", "omap-3430sdp", "file://sdp-device.patch;patch=1", "", d)} \
+    "
 
 inherit ccasefetch
 
