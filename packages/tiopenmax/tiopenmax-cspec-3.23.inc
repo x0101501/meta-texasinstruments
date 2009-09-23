@@ -5,7 +5,8 @@ CCASE_SPEC = "\
 	element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/camera/inc/OMX_Camera_Utils.h  LINUX-MMVIDEO_RLS_3.24%\
 	#element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/camera/src/OMX_Camera.c  LINUX-MMVIDEO_RLS_3.24%\
 	#element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/camera/src/OMX_Camera_Utils.c  LINUX-MMVIDEO_RLS_3.24%\
-	element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/post_processor/... ACT_VIDEOL23.17RC7-1%\
+	element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/post_processor/src/OMX_PostProc_Utils.c ACT_VIDEOL23.17RC7-DISP%\	
+	element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/post_processor/... ACT_VIDEOL23.17RC7%\
 	# OMX Audio%\
 	element /vobs/wtbu/OMAPSW_MPU/linux/audio/... LINUX-MMAUDIO_RLS_${PV}P2%\
 	# OMX Video%\
