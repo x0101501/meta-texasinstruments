@@ -1,6 +1,6 @@
 DESCRIPTION = "Texas Instruments OpenMAX IL Camera."
 DEPENDS = "tidspbridge-lib tiopenmax-core tiopenmax-lcml tiopenmax-rmproxy tiopenmax-resourcemanager mm-isp tiopenmax-clock"
-PR = "r2"
+PR = "r3"
 PACKAGES = "${PN}-dbg ${PN}-patterns ${PN}-dev ${PN}"
 
 require tiopenmax-cspec-${PV}.inc
@@ -16,8 +16,7 @@ CCASE_PATHCOMPONENT = "linux"
 SRC_URI = "\
 	file://23.14-cameranocore.patch;patch=1 \
 	file://23.14-cameratestnocore.patch;patch=1 \
-	file://OMX_Camera.c \
-	file://OMX_Camera_Utils.c \
+	file://remove-202986-for-l23.17-compat.patch;patch=1 \
 	${@base_contains("DISTRO_FEATURES", "testpatterns", "", "file://remove-patterns.patch;patch=1", d)} \
 	${@base_contains("MACHINE", "omap-3430sdp", "file://sdp-device.patch;patch=1", "", d)} \
 	"
@@ -25,8 +24,6 @@ SRC_URI = "\
 inherit ccasefetch
 
 do_compile_prepend() {
-	cp -f ${WORKDIR}/OMX_Camera.c ${S}/video/src/openmax_il/camera/src/OMX_Camera.c
-	cp -f ${WORKDIR}/OMX_Camera_Utils.c ${S}/video/src/openmax_il/camera/src/OMX_Camera_Utils.c
 	install -d ${D}/usr/omx/patterns
 	install -d ${D}/usr/lib
 	install -d ${D}/usr/bin

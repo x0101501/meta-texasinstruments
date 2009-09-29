@@ -1,3 +1,5 @@
+# Versions common to all machines
+
 # tasks and images
 PREFERRED_VERSION_task-omap-bridge.bb =			"1.0"
 PREFERRED_VERSION_task-omap-connectivity.bb =		"1.0"
@@ -15,9 +17,10 @@ PREFERRED_VERSION_omap-image-sato.bb =			"1.0
 SRCREV_pn-linux-tiomap ?= "02b2ce47a93e32f3b4e26662d78a0f31a6ac37ab"
 
 # bridge and friends
-PREFERRED_VERSION_tidspbridge-module =		"23.17-P2"
-PREFERRED_VERSION_tidspbridge-lib =		"23.17-P2"
-PREFERRED_VERSION_tidspbridge-samples =		"4.54"
+#PREFERRED_VERSION_tidspbridge-module =		"23.17-P1"
+PREFERRED_VERSION_tidspbridge-lib =		"23.17-P3"
+PREFERRED_VERSION_tidspbridge-samples =		"23.17-P3"
+PREFERRED_VERSION_tidspbridge-samples-dsp =		"4.54"
 PREFERRED_VERSION_tidspbridge-extra =		"23.13"
 PREFERRED_VERSION_tidspbridge-cgt6x =		"6.0.7"
 PREFERRED_VERSION_tidspbridge-bios =		"5.33.02"
