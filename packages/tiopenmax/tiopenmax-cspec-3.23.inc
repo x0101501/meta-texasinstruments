@@ -1,5 +1,13 @@
 CCASE_SPEC = "\
 	${@base_contains("DISTRO_FEATURES", "testpatterns", "", "element patterns /main/0", d)}%\
+	# LO Migration Patches%\
+	element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/camera/inc/videodev2.h  LINUX-MMVIDEO_RLS_3.24%\
+	element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/camera/inc/OMX_Camera_Utils.h  LINUX-MMVIDEO_RLS_3.24%\
+	#element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/camera/src/OMX_Camera.c  LINUX-MMVIDEO_RLS_3.24%\
+	#element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/camera/src/OMX_Camera_Utils.c  LINUX-MMVIDEO_RLS_3.24%\
+	element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/post_processor/src/OMX_PostProc_Utils.c ACT_VIDEOL23.17RC7-DISP%\	
+	element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/video_decode/src/Makefile ACT_3630VIDEO-INT%\	
+	element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/post_processor/... ACT_VIDEOL23.17RC7%\
 	# OMX Audio%\
 	element /vobs/wtbu/OMAPSW_MPU/linux/audio/... LINUX-MMAUDIO_RLS_${PV}P5%\
 	# OMX Video%\

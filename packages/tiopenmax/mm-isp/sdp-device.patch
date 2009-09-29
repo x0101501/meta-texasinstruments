@@ -1,0 +1,13 @@
+Index: mm-isp-1.16/linux/mm_isp/camera_algo_frmwk/src/camdriver_interface.c
+===================================================================
+--- mm-isp-1.16.orig/linux/mm_isp/camera_algo_frmwk/src/camdriver_interface.c	2009-09-22 15:27:46.000000000 +0200
++++ mm-isp-1.16/linux/mm_isp/camera_algo_frmwk/src/camdriver_interface.c	2009-09-22 15:28:01.000000000 +0200
+@@ -32,7 +32,7 @@
+ #define VIDIOC_PRIVATE_ISP_AF_REQ    _IOWR('V', BASE_VIDIOC_PRIVATE + 9, struct isp_af_data_driver)
+ */
+ 
+-#define VIDEO_DEVICE "/dev/video5"
++#define VIDEO_DEVICE "/dev/video0"
+ #define STATS_MAX_BUFF_SIZE  82944
+ #define MIN_FRAME_NUMBER 1
+ #define MAX_FRAME_NUMBER 4095

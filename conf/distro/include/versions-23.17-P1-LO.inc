@@ -11,6 +11,9 @@ PREFERRED_VERSION_omap-image-minimal.bb =		"1.0"
 PREFERRED_VERSION_omap-image-mm.bb =			"1.0"
 PREFERRED_VERSION_omap-image-sato.bb =			"1.0
 
+# Linux TIOMAP kernel
+SRCREV_pn-linux-tiomap ?= "02b2ce47a93e32f3b4e26662d78a0f31a6ac37ab"
+
 # bridge and friends
 PREFERRED_VERSION_tidspbridge-module =		"23.17-P2"
 PREFERRED_VERSION_tidspbridge-lib =		"23.17-P2"
@@ -192,12 +195,12 @@ PREFERRED_VERSION_tiopenmax-imagecapturetest =	"3.23"
 PREFERRED_VERSION_tiopenmax-imagedisplaytest =	"3.23"
 PREFERRED_VERSION_tiopenmax-videodisplaytest =	"3.23"
 PREFERRED_VERSION_tiopenmax-videocapturetest =	"3.23"
-PREFERRED_VERSION_mm-isp =			"1.15"
+PREFERRED_VERSION_mm-isp =			"1.16"
 
 # gstreamer
-PREFERRED_VERSION_libgoo =		"5.17"
-PREFERRED_VERSION_gst-goo =		"5.17"
-PREFERRED_VERSION_gst-pyapps =		"5.17"
+PREFERRED_VERSION_libgoo =		"5.17m.3"
+PREFERRED_VERSION_gst-goo =		"5.17m.3"
+PREFERRED_VERSION_gst-pyapps =		"5.17M.2"
 
 # connectivity
 PREFERRED_VERSION_wilink = 		"23-17"
@@ -210,9 +213,11 @@ PREFERRED_VERSION_sgx-kernel-module =	"1.3.2.6"
 PREFFERED_VERSION_sgx-lib-noxws =	"1.3.2.6"
 
 # open source dependencies
-PREFERRED_VERSION_gst-plugins-bad =	"0.10.8"
-PREFERRED_VERSION_gst-plugins-ugly =	"0.10.9"
-PREFERRED_VERSION_gst-plugins-good =	"0.10.7"
+PREFERRED_VERSION_gst-plugins-bad =	"git"
+PREFERRED_VERSION_gst-plugins-ugly =	"git"
+PREFERRED_VERSION_gst-plugins-good =	"git"
+PREFERRED_VERSION_gst-plugins-base =	"git"
+PREFERRED_VERSION_gstreamer = 		"git"
 PREFERRED_VERSION_gst-qtmux =		"svn"
 PREFERRED_VERSION_check =		"0.9.5"
 PREFERRED_VERSION_amrnb =		"7.0.0.2"

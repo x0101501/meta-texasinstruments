@@ -1,0 +1,13 @@
+Index: tiopenmax-camera-3.23/video/src/openmax_il/camera/inc/OMX_Camera_Utils.h
+===================================================================
+--- tiopenmax-camera-3.23.orig/video/src/openmax_il/camera/inc/OMX_Camera_Utils.h	2009-09-22 15:24:39.000000000 +0200
++++ tiopenmax-camera-3.23/video/src/openmax_il/camera/inc/OMX_Camera_Utils.h	2009-09-22 15:25:00.000000000 +0200
+@@ -159,7 +159,7 @@
+ #define OMXCAM_CMD_STOPTHREAD -1
+ 
+ /* Camera driver interface related */
+-#define VIDEO_DEVICE_PRIMARY "/dev/video5"
++#define VIDEO_DEVICE_PRIMARY "/dev/video0"
+ #define VIDEO_DEVICE_SECONDARY "/dev/video4"
+ #define VIDIOC_BURSTON        _IOW ('O', 3, int)
+ #define VIDIOC_BURSTOFF       _IOW ('O', 4, int)
