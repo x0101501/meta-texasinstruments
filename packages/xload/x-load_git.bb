@@ -9,10 +9,11 @@ DEFAULT_PREFERENCE = "1"
  
 XLOAD_MACHINE_omap-3430ldp = "omap3430labrador_config"
 XLOAD_MACHINE_omap-3430sdp = "omap3430sdp_config"
+XLOAD_MACHINE_omap-3630sdp = "omap3630sdp_config"
 XLOAD_MACHINE_zoom2 ="omap3430zoom2_config"
  
 PACKAGE_ARCH = "${MACHINE_ARCH}"
-COMPATIBLE_MACHINE = "omap-3430(l|s)dp|zoom2"
+COMPATIBLE_MACHINE = "omap-3430(l|s)dp|omap-3630sdp|zoom2"
  
 #EXTRA_OEMAKE = "CROSS_COMPILE=${TARGET_PREFIX} -I${STAGING_INCDIR}/u-boot/"
 EXTRA_OEMAKE = "CROSS_COMPILE=${TARGET_PREFIX}"
@@ -28,6 +29,7 @@ S = ${WORKDIR}/git
  
 SRC_URI = "git://git.omapzoom.org/repo/x-loader.git;branch=master;protocol=git \
 "
+
  
 do_configure() {
 cd ${S}/include

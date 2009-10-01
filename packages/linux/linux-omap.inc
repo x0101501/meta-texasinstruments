@@ -6,7 +6,7 @@ KERNEL_OUTPUT = "arch/${ARCH}/boot/compressed/${KERNEL_IMAGETYPE}"
 
 inherit kernel
 
-COMPATIBLE_MACHINE = "omap-3430ldp|omap-3430sdp|zoom2"
+COMPATIBLE_MACHINE = "omap-3430ldp|omap-3430sdp|omap-3630sdp|zoom2"
 
 ADD_DISTRO_FEATURES = "	${@base_contains("DISTRO_FEATURES", "720p", "sed -i 's/# CONFIG_FB_OMAP_720P_STREAMING is not set/CONFIG_FB_OMAP_720P_STREAMING=y/' ${S}/.config;", "", d)}"
 
@@ -39,6 +39,9 @@ do_configure_prepend() {
 				yes '' | oe_runmake omap_3430sdp_defconfig
 #				sed -i "s/# CONFIG_FB_OMAP_LCD_VGA is not set/CONFIG_FB_OMAP_LCD_VGA=y/" \
 #					${S}/.config
+				;;
+			omap-3630sdp)
+				yes '' | oe_runmake omap_3630sdp_defconfig
 				;;
 			zoom2)
 				yes '' | oe_runmake omap_zoom2_defconfig

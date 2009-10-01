@@ -2,13 +2,14 @@ require u-boot.inc
  
 PR = "r0"
  
-SRC_URI = "git://git.omapzoom.org/repo/u-boot.git;branch=master;protocol=git \
+SRC_URI = "git://git.omapzoom.org/repo/u-boot.git;branch=3630v0.1;protocol=git \
 "
  
-COMPATIBLE_MACHINE = "omap-3430(l|s)dp|zoom2"
+COMPATIBLE_MACHINE = "omap-3430(l|s)dp|omap-3630sdp|zoom2"
  
 UBOOT_MACHINE_omap-3430ldp = "omap3430labrador_config"
 UBOOT_MACHINE_omap-3430sdp = "omap3430sdp_config"
+UBOOT_MACHINE_omap-3630sdp = "omap3630sdp_config"
 UBOOT_MACHINE_zoom2 ="omap3430zoom2_config"
  
 S=${WORKDIR}/git

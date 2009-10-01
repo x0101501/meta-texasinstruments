@@ -2,14 +2,14 @@ require linux-omap.inc
 
 PR = "r1"
 
-SRC_URI = "git://dev.omapzoom.org/pub/scm/integration/kernel-omap3.git;protocol=git;branch=master"
+SRC_URI = "git://dev.omapzoom.org/pub/scm/nimal/kernel-omap3630-base.git;protocol=git;branch=3630v0.1"
 
 PV = "2.6+git${SRCREV}"
 
 S = "${WORKDIR}/git"
 
 
-COMPATIBLE_MACHINE = "omap-3430ldp|omap-3430sdp|zoom2"
+COMPATIBLE_MACHINE = "omap-3430ldp|omap-3430sdp|omap-3630sdp|zoom2"
 
 DEFAULT_PREFERENCE = "1"
 
