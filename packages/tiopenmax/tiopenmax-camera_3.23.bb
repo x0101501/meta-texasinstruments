@@ -16,7 +16,7 @@ CCASE_PATHCOMPONENT = "linux"
 SRC_URI = "\
 	file://23.14-cameranocore.patch;patch=1 \
 	file://23.14-cameratestnocore.patch;patch=1 \
-	file://remove-202986-for-l23.17-compat.patch;patch=1 \
+	file://lo-change-missing-change.patch;patch=1 \
 	${@base_contains("DISTRO_FEATURES", "testpatterns", "", "file://remove-patterns.patch;patch=1", d)} \
 	${@base_contains("MACHINE", "omap-3430sdp", "file://sdp-device.patch;patch=1", "", d)} \
 	"

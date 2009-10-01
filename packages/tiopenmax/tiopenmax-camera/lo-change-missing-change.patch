@@ -1,0 +1,15 @@
+Index: tiopenmax-camera-3.23/video/src/openmax_il/camera/src/OMX_Camera_Utils.c
+===================================================================
+--- tiopenmax-camera-3.23.orig/video/src/openmax_il/camera/src/OMX_Camera_Utils.c	2009-09-30 15:30:41.000000000 +0200
++++ tiopenmax-camera-3.23/video/src/openmax_il/camera/src/OMX_Camera_Utils.c	2009-09-30 15:34:12.000000000 +0200
+@@ -4200,7 +4200,9 @@
+                           "Color effect is not supported!");
+ 
+     /* Retrieve brightness */
+-    sControl.id = V4L2_CID_PRIVATE_ISP_COLOR_FX;
++    //sControl.id = V4L2_CID_PRIVATE_ISP_COLOR_FX;
++
++    sControl.id = V4L2_CID_COLORFX;
+     OMX_CAMERA_PRINTF_L2("ioctlCamera(VIDIOC_G_CTRL,V4L2_CID_PRIVATE_ISP_COLOR_FX)");
+     OMX_CAMERA_CHECK_COND(ioctlCamera(pComponentPrivate->nCameraDev,
+                                       VIDIOC_G_CTRL,
