@@ -54,7 +54,10 @@ install -m 644 ${S}/include/asm-arm/arch-omap3/sys_info.h \
 ${STAGING_INCDIR}/${PN}/asm-arm/arch-omap3/
 install -m 644 ${S}/include/asm-arm/arch-omap3/sys_proto.h \
 ${STAGING_INCDIR}/${PN}/asm-arm/arch-omap3/
- 
+install -m 644 ${S}/include/asm-arm/arch-omap3/rev.h \
+${STAGING_INCDIR}/${PN}/asm-arm/arch-omap3/
+
+
 install -m 644 ${S}/include/linux/byteorder/* \
 ${STAGING_INCDIR}/${PN}/linux/byteorder/
 install -m 644 ${S}/include/linux/stat.h ${STAGING_INCDIR}/${PN}/linux/

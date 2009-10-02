@@ -42,7 +42,7 @@ ln -sf ${STAGING_INCDIR}/u-boot/part.h
  
 cd ${S}/include/asm
 ln -sf ${STAGING_INCDIR}/u-boot/asm-arm/byteorder.h
- 
+
 cd ${S}/include/asm/arch-omap3
 ln -sf ${STAGING_INCDIR}/u-boot/asm-arm/arch-omap3/bits.h
 ln -sf ${STAGING_INCDIR}/u-boot/asm-arm/arch-omap3/clocks.h
@@ -54,7 +54,8 @@ ln -sf ${STAGING_INCDIR}/u-boot/asm-arm/arch-omap3/omap3430.h
 ln -sf ${STAGING_INCDIR}/u-boot/asm-arm/arch-omap3/sizes.h
 ln -sf ${STAGING_INCDIR}/u-boot/asm-arm/arch-omap3/sys_info.h
 ln -sf ${STAGING_INCDIR}/u-boot/asm-arm/arch-omap3/sys_proto.h
- 
+ln -sf ${STAGING_INCDIR}/u-boot/asm-arm/arch-omap3/rev.h
+
 cd ${S}/include/linux
 ln -sf ${STAGING_INCDIR}/u-boot/linux/stat.h
 ln -sf ${STAGING_INCDIR}/u-boot/linux/time.h
