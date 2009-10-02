@@ -1,6 +1,6 @@
 # omap3630 SDP specific versions
 
 # baseport
-SRCREV_pn-x-load ?= "e25a588b5628238ba1b225cdfb6f320122850ad0"
-SRCREV_pn-u-boot ?= "b78da33ccaf32720cfc1d347d654a546098f5043"
+SRCREV_pn-x-load ?= "40d4c8972ef1352e7cce7a8b17be95a9197d6511"
+SRCREV_pn-u-boot ?= "426934de1515afcc83ad4ece770ad7ef3465d37b"
 
