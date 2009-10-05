@@ -17,12 +17,12 @@ PREFERRED_VERSION_omap-image-sato.bb =			"1.0
 SRCREV_pn-linux-tiomap ?= "71616e7b309fd73b4b2a7432835f6e2ae3993cc7"
 
 # bridge and friends
-PREFERRED_VERSION_tidspbridge-lib =		"23.17-P3"
-PREFERRED_VERSION_tidspbridge-samples =		"23.17-P3"
+SRCREV_pn-tidspbridge-lib = "264f19327fac5a3a4c5f71697262d2ab9cd73952"
+SRCREV_pn-tidspbridge-samples = "264f19327fac5a3a4c5f71697262d2ab9cd73952"
 PREFERRED_VERSION_tidspbridge-samples-dsp =		"4.55"
 PREFERRED_VERSION_tidspbridge-extra =		"23.13"
 PREFERRED_VERSION_tidspbridge-cgt6x =		"6.0.7"
-PREFERRED_VERSION_tidspbridge-bios =		"5.33.02"
+PREFERRED_VERSION_tidspbridge-bios =		"5.33.04"
 PREFERRED_VERSION_tidspbridge-dllcreate-native =	"23.11"
 
 # baseimage

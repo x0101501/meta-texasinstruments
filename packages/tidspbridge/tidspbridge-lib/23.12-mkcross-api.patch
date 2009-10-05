@@ -1,7 +1,7 @@
-Index: tidspbridge-lib-23.12/mpu_api/make/start.mk
+Index: tidspbridge-lib-23.12/source/mpu_api/make/start.mk
 ===================================================================
---- tidspbridge-lib-23.12.orig/mpu_api/make/start.mk
-+++ tidspbridge-lib-23.12/mpu_api/make/start.mk
+--- tidspbridge-lib-23.12.orig/source/mpu_api/make/start.mk
++++ tidspbridge-lib-23.12/source/mpu_api/make/start.mk
 @@ -32,7 +32,9 @@ CMDDEFS =
  CMDDEFS_START =
  
@@ -29,10 +29,10 @@ Index: tidspbridge-lib-23.12/mpu_api/make/start.mk
  STRIP	:= $(CROSS)strip
 -
 +endif
-Index: tidspbridge-lib-23.12/mpu_api/src/bridge/Makefile
+Index: tidspbridge-lib-23.12/source/mpu_api/src/bridge/Makefile
 ===================================================================
---- tidspbridge-lib-23.12.orig/mpu_api/src/bridge/Makefile
-+++ tidspbridge-lib-23.12/mpu_api/src/bridge/Makefile
+--- tidspbridge-lib-23.12.orig/source/mpu_api/src/bridge/Makefile
++++ tidspbridge-lib-23.12/source/mpu_api/src/bridge/Makefile
 @@ -90,7 +90,7 @@ INCLUDES    = \
  # Libraries needed for linking.
  

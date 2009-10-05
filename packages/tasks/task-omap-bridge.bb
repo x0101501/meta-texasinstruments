@@ -10,7 +10,7 @@ ALLOW_EMPTY = "1"
 
 RDEPENDS = "\
     tidspbridge-lib \
-    tidspbridge-samples \
+    tidspbridge-mpusamples \
     tidspbridge-extra \
     baseimage \
     "
