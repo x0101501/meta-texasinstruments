@@ -27,7 +27,7 @@ XLOAD_MLO_SYMLINK ?= "MLO"
  
 S = ${WORKDIR}/git
  
-SRC_URI = "git://git.omapzoom.org/repo/x-loader.git;branch=master;protocol=git \
+SRC_URI = "git://git.omapzoom.org/repo/x-loader.git;branch=3630v0.1;protocol=git \
 "
 
  
