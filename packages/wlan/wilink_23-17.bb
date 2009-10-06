@@ -9,7 +9,7 @@ inherit ccasefetch
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "omap-3430ldp|omap-3430sdp|omap-zoom2-(alpha|beta)"
+COMPATIBLE_MACHINE = "omap-3430ldp|omap-3430sdp|omap-3630sdp|zoom2"
 
 CCASE_SPEC = "%\
 	element /vobs/WiLink/... LINUX-WCG-WLAN_RLS_L${PV} %\
