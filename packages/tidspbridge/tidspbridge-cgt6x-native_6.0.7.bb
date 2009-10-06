@@ -14,5 +14,4 @@ do_stage() {
 	chmod -R +w ${S}/*
 	install -d ${STAGING_BINDIR}/dspbridge/tools/cgt6x-${PV}
 	cp -a ${S}/* ${STAGING_BINDIR}/dspbridge/tools
-	chmod -R +wx ${STAGING_BINDIR}/dspbridge/tools
 }

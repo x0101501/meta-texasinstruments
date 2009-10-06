@@ -26,9 +26,6 @@ do_compile() {
                 ROOTFSDIR=${D}/dspbridge \
                 CROSS=${AR%-*}- -f Makefile
 
-        install -d ${S}/source/target/lib/
-        install -d ${S}/source/samples/mpu/lib/
-
 	cp bridge/libbridge.so* ${S}/source/target/lib/
 	cp bridge/libbridge.so* ${S}/source/samples/mpu/lib/
 	cp qos/libqos.* ${S}/source/target/lib/

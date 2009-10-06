@@ -42,10 +42,10 @@ Index: tidspbridge-lib-23.12/source/mpu_api/src/bridge/Makefile
  
  # Search path for library (and linker command) files.
  # Current folder and target folder are included by default.
-Index: tidspbridge-lib-23.12/source/mpu_api/src/qos/Makefile
+Index: tidspbridge-lib-23.12/mpu_api/src/qos/Makefile
 ===================================================================
---- tidspbridge-lib-23.12.orig/source/mpu_api/src/qos/Makefile
-+++ tidspbridge-lib-23.12/source/mpu_api/src/qos/Makefile
+--- tidspbridge-lib-23.12.orig/mpu_api/src/qos/Makefile
++++ tidspbridge-lib-23.12/mpu_api/src/qos/Makefile
 @@ -89,7 +89,7 @@ INCLUDES    = \
  # Libraries needed for linking.
  
