@@ -14,7 +14,7 @@ PREFERRED_VERSION_omap-image-mm.bb =			"1.0"
 PREFERRED_VERSION_omap-image-sato.bb =			"1.0
 
 # Linux TIOMAP kernel
-SRCREV_pn-linux-tiomap ?= "f6861943cd51a8ba3df6e78346b0f3ff97ab689e"
+SRCREV_pn-linux-tiomap ?= "917c2c0671c50888d3ce9cfd912176e6b5ccd5eb"
 
 # bridge and friends
 PREFERRED_VERSION_tidspbridge-lib =		"23.17-P3"
