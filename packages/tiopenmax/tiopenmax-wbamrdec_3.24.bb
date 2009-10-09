@@ -1,12 +1,12 @@
-DESCRIPTION = "Texas Instruments OpenMAX IL Video Encoder."
-DEPENDS = "tidspbridge-lib tiopenmax-core tiopenmax-lcml tiopenmax-rmproxy tiopenmax-resourcemanager"
-PR = "r1"
+DESCRIPTION = "Texas Instruments OpenMAX IL WBAMR Decoder."
+DEPENDS = "tidspbridge-lib tiopenmax-core tiopenmax-lcml tiopenmax-rmproxy tiopenmax-resourcemanager tiopenmax-audiomanager"
+PR = "r0"
 PACKAGES = "${PN}-dbg ${PN}-patterns ${PN}-dev ${PN}"
 
 require tiopenmax-cspec-${PV}.inc
 
 CCASE_PATHFETCH = "\
-	/vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/video_encode \
+	/vobs/wtbu/OMAPSW_MPU/linux/audio/src/openmax_il/wbamr_dec \
 	/vobs/wtbu/OMAPSW_MPU/linux/Makefile \
 	/vobs/wtbu/OMAPSW_MPU/linux/Master.mk \
 	"
@@ -14,21 +14,23 @@ CCASE_PATHCOMPONENTS = 3
 CCASE_PATHCOMPONENT = "linux"
 
 SRC_URI = "\
-	file://3.21-videoencnocore.patch;patch=1 \
-	file://3.21-videoenctestnocore.patch;patch=1 \
-	${@base_contains("DISTRO_FEATURES", "testpatterns", "", "file://remove-patterns.patch;patch=1", d)} \
-	"
+          file://23.14-wbamrdecnocore.patch;patch=1 \
+	  file://23.14-wbamrdectestnocore.patch;patch=1 \
+	  ${@base_contains("DISTRO_FEATURES", "testpatterns", "", "file://remove-patterns.patch;patch=1", d)} \
+	   "
 
 inherit ccasefetch
 
 do_compile_prepend() {
-	install -d ${D}/usr/omx
+	install -d ${D}/usr/omx/patterns
 	install -d ${D}/usr/lib
 	install -d ${D}/usr/bin
 }
 
 do_compile() {
-	cd ${S}/video/src/openmax_il/video_encode
+	cd ${S}/audio/src/openmax_il/wbamr_dec
+	rm inc/TIDspOmx.h
+	cp  ${STAGING_INCDIR}/omx/TIDspOmx.h inc/
 	oe_runmake \
 		PREFIX=${D}/usr PKGDIR=${S} \
 		CROSS=${AR%-*}- \
@@ -40,8 +42,7 @@ do_compile() {
 }
 
 do_install() {
-	install -d ${D}/usr/bin
-	cd ${S}/video/src/openmax_il/video_encode
+	cd ${S}/audio/src/openmax_il/wbamr_dec
 	oe_runmake \
 		PREFIX=${D}/usr PKGDIR=${S} \
 		CROSS=${AR%-*}- \
@@ -53,7 +54,7 @@ do_install() {
 }
 
 do_stage() {
-	cd ${S}/video/src/openmax_il/video_encode
+	cd ${S}/audio/src/openmax_il/wbamr_dec
 	oe_runmake \
 		PREFIX=${STAGING_DIR_TARGET}/usr PKGDIR=${S} \
 		CROSS=${AR%-*}- \
@@ -79,7 +80,7 @@ FILES_${PN}-dbg = "\
 	"
 
 FILES_${PN}-dev = "\
-	/usr/include \
+	/usr/include/omx \
 	"
 
 do_stage_rm_omxdir() {
@@ -89,8 +90,7 @@ do_stage_rm_omxdir() {
 
 do_install_cleanup() {
 	# move test files out of /usr/bin/ to /usr/omx only if test patterns exist
-	${@base_contains("DISTRO_FEATURES", "testpatterns", "mv ${D}${bindir}/video_encoder.* ${D}/usr/omx/patterns", "echo nothing to do here!", d)}
-	${@base_contains("DISTRO_FEATURES", "testpatterns", "mv ${D}${bindir}/qcif_420_300.yuv* ${D}/usr/omx/patterns", "echo nothing to do here!", d)}
+	${@base_contains("DISTRO_FEATURES", "testpatterns", "mv ${D}${bindir}/audio_decoder.amrwb* ${D}/usr/omx/patterns", "echo nothing to do here!", d)}
 }
 
 addtask install_cleanup after do_install before do_package

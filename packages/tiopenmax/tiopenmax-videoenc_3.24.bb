@@ -1,12 +1,12 @@
-DESCRIPTION = "Texas Instruments OpenMAX IL Post Processor."
-DEPENDS = "tidspbridge-lib tiopenmax-core tiopenmax-lcml tiopenmax-rmproxy tiopenmax-resourcemanager tiopenmax-clock"
-PR = "r1"
+DESCRIPTION = "Texas Instruments OpenMAX IL Video Encoder."
+DEPENDS = "tidspbridge-lib tiopenmax-core tiopenmax-lcml tiopenmax-rmproxy tiopenmax-resourcemanager"
+PR = "r0"
 PACKAGES = "${PN}-dbg ${PN}-patterns ${PN}-dev ${PN}"
 
 require tiopenmax-cspec-${PV}.inc
 
 CCASE_PATHFETCH = "\
-	/vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/post_processor \
+	/vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/video_encode \
 	/vobs/wtbu/OMAPSW_MPU/linux/Makefile \
 	/vobs/wtbu/OMAPSW_MPU/linux/Master.mk \
 	"
@@ -14,8 +14,8 @@ CCASE_PATHCOMPONENTS = 3
 CCASE_PATHCOMPONENT = "linux"
 
 SRC_URI = "\
-	file://23.13-postprocnocore.patch;patch=1 \
-	file://23.13-postproctestnocore.patch;patch=1 \
+	file://3.21-videoencnocore.patch;patch=1 \
+	file://3.21-videoenctestnocore.patch;patch=1 \
 	${@base_contains("DISTRO_FEATURES", "testpatterns", "", "file://remove-patterns.patch;patch=1", d)} \
 	"
 
@@ -28,7 +28,7 @@ do_compile_prepend() {
 }
 
 do_compile() {
-	cd ${S}/video/src/openmax_il/post_processor
+	cd ${S}/video/src/openmax_il/video_encode
 	oe_runmake \
 		PREFIX=${D}/usr PKGDIR=${S} \
 		CROSS=${AR%-*}- \
@@ -40,7 +40,8 @@ do_compile() {
 }
 
 do_install() {
-	cd ${S}/video/src/openmax_il/post_processor
+	install -d ${D}/usr/bin
+	cd ${S}/video/src/openmax_il/video_encode
 	oe_runmake \
 		PREFIX=${D}/usr PKGDIR=${S} \
 		CROSS=${AR%-*}- \
@@ -52,12 +53,12 @@ do_install() {
 }
 
 do_stage() {
-	cd ${S}/video/src/openmax_il/post_processor
+	cd ${S}/video/src/openmax_il/video_encode
 	oe_runmake \
 		PREFIX=${STAGING_DIR_TARGET}/usr PKGDIR=${S} \
 		CROSS=${AR%-*}- \
 		BRIDGEINCLUDEDIR=${STAGING_INCDIR}/dspbridge BRIDGELIBDIR=${STAGING_LIBDIR} \
-		TARGETDIR=${STAGING_DIR_TARGET}/usr OMXTESTDIR=${STAGING_BIDIR} OMXROOT=${S} \
+		TARGETDIR=${STAGING_DIR_TARGET}/usr OMXTESTDIR=${STAGING_BINDIR} OMXROOT=${S} \
 		OMX_PERF_INSTRUMENTATION=1 OMX_PERF_CUSTOMIZABLE=1 \
 		SYSTEMINCLUDEDIR=${STAGING_INCDIR}/omx \
 		install
@@ -86,4 +87,11 @@ do_stage_rm_omxdir() {
 	${@base_contains("DISTRO_FEATURES", "testpatterns", "rm -rf ${STAGING_DIR_TARGET}/usr/omx/", "echo nothing to do here!", d)}
 }
 
+do_install_cleanup() {
+	# move test files out of /usr/bin/ to /usr/omx only if test patterns exist
+	${@base_contains("DISTRO_FEATURES", "testpatterns", "mv ${D}${bindir}/video_encoder.* ${D}/usr/omx/patterns", "echo nothing to do here!", d)}
+	${@base_contains("DISTRO_FEATURES", "testpatterns", "mv ${D}${bindir}/qcif_420_300.yuv* ${D}/usr/omx/patterns", "echo nothing to do here!", d)}
+}
+
+addtask install_cleanup after do_install before do_package
 addtask stage_rm_omxdir after do_populate_staging before do_package_stage
