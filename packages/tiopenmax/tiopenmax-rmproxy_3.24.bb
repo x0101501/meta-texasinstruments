@@ -1,6 +1,6 @@
 DEPENDS = "tidspbridge-lib tiopenmax-core"
 DESCRIPTION = "Texas Instruments OpenMAX IL Resource Manager Proxy."
-PR = "r1"
+PR = "r0"
 PACKAGES = "${PN}-dbg ${PN}-dev ${PN}"
 
 require tiopenmax-cspec-${PV}.inc

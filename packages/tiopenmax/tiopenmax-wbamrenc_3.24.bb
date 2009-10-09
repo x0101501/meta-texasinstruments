@@ -1,22 +1,23 @@
-DESCRIPTION = "Texas Instruments OpenMAX IL WMA Decoder."
+DESCRIPTION = "Texas Instruments OpenMAX IL WBAMR Encoder."
 DEPENDS = "tidspbridge-lib tiopenmax-core tiopenmax-lcml tiopenmax-rmproxy tiopenmax-resourcemanager tiopenmax-audiomanager"
-PR = "r1"
+PR = "r0"
 PACKAGES = "${PN}-dbg ${PN}-patterns ${PN}-dev ${PN}"
 
 require tiopenmax-cspec-${PV}.inc
+
 CCASE_PATHFETCH = "\
-	/vobs/wtbu/OMAPSW_MPU/linux/audio/src/openmax_il/wma_dec \
+	/vobs/wtbu/OMAPSW_MPU/linux/audio/src/openmax_il/wbamr_enc \
 	/vobs/wtbu/OMAPSW_MPU/linux/Makefile \
 	/vobs/wtbu/OMAPSW_MPU/linux/Master.mk \
 	"
 CCASE_PATHCOMPONENTS = 3
 CCASE_PATHCOMPONENT = "linux"
 
-SRC_URI = " \
-	file://23.14-wmadecnocore.patch;patch=1 \
-	file://23.14-wmadectestnocore.patch;patch=1 \
-	${@base_contains("DISTRO_FEATURES", "testpatterns", "", "file://remove-patterns.patch;patch=1", d)} \
-	"
+SRC_URI = "\
+          file://23.14-wbamrencnocore.patch;patch=1 \
+	  file://23.14-wbamrenctestnocore.patch;patch=1 \
+	  ${@base_contains("DISTRO_FEATURES", "testpatterns", "", "file://remove-patterns.patch;patch=1", d)} \
+	   "
 
 inherit ccasefetch
 
@@ -27,8 +28,8 @@ do_compile_prepend() {
 }
 
 do_compile() {
-	cd ${S}/audio/src/openmax_il/wma_dec
-	rm inc/TIDspOmx.h
+	cd ${S}/audio/src/openmax_il/wbamr_enc
+        rm inc/TIDspOmx.h
 	cp  ${STAGING_INCDIR}/omx/TIDspOmx.h inc/
 	oe_runmake \
 		PREFIX=${D}/usr PKGDIR=${S} \
@@ -41,7 +42,7 @@ do_compile() {
 }
 
 do_install() {
-	cd ${S}/audio/src/openmax_il/wma_dec
+	cd ${S}/audio/src/openmax_il/wbamr_enc
 	oe_runmake \
 		PREFIX=${D}/usr PKGDIR=${S} \
 		CROSS=${AR%-*}- \
@@ -53,7 +54,7 @@ do_install() {
 }
 
 do_stage() {
-	cd ${S}/audio/src/openmax_il/wma_dec
+	cd ${S}/audio/src/openmax_il/wbamr_enc
 	oe_runmake \
 		PREFIX=${STAGING_DIR_TARGET}/usr PKGDIR=${S} \
 		CROSS=${AR%-*}- \
@@ -78,6 +79,7 @@ FILES_${PN}-dbg = "\
 	/usr/lib/.debug \
 	"
 
+
 FILES_${PN}-dev = "\
 	/usr/include \
 	"
@@ -88,8 +90,8 @@ do_stage_rm_omxdir() {
 }
 
 do_install_cleanup() {
-	${@base_contains("DISTRO_FEATURES", "testpatterns", "mv ${D}${bindir}/audio_decoder.wma_* ${D}/usr/omx/patterns", "echo nothing to do here!", d)}
-	${@base_contains("DISTRO_FEATURES", "testpatterns", "mv ${D}${bindir}/test*_WMA_* ${D}/usr/omx/patterns", "echo nothing to do here!", d)}
+	# move test files out of /usr/bin/ to /usr/omx only if test patterns exist
+	${@base_contains("DISTRO_FEATURES", "testpatterns", "mv ${D}${bindir}/audio_encoder.amrwb* ${D}/usr/omx/patterns", "echo nothing to do here!", d)}
 }
 
 addtask install_cleanup after do_install before do_package

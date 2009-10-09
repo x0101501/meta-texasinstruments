@@ -1,6 +1,6 @@
 DESCRIPTION = "Texas Instruments OpenMAX IL Video Decoder."
 DEPENDS = "tidspbridge-lib tiopenmax-core tiopenmax-lcml tiopenmax-rmproxy tiopenmax-resourcemanager"
-PR = "r1"
+PR = "r0"
 PACKAGES = "${PN}-dbg ${PN}-patterns ${PN}-dev ${PN}"
 
 require tiopenmax-cspec-${PV}.inc
