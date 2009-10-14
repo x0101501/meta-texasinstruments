@@ -2,15 +2,22 @@ require u-boot.inc
  
 PR = "r0"
  
-SRC_URI = "git://git.omapzoom.org/repo/u-boot.git;branch=3630v0.1;protocol=git \
+#SRC_URI = "git://git.omapzoom.org/repo/u-boot.git;branch=zoom3;protocol=git \
+#"
+
+SRC_URI = " \
+${@base_contains("MACHINE", "omap-3630sdp", "git://git.omapzoom.org/repo/u-boot.git;branch=3630v0.1;protocol=git", "", d)} \
+${@base_contains("MACHINE", "zoom3", "git://git.omapzoom.org/repo/u-boot.git;branch=zoom3;protocol=git", "", d)} \
 "
  
-COMPATIBLE_MACHINE = "omap-3430(l|s)dp|omap-3630sdp|zoom2"
+COMPATIBLE_MACHINE = "omap-3430(l|s)dp|omap-3630sdp|zoom2|zoom3"
  
 UBOOT_MACHINE_omap-3430ldp = "omap3430labrador_config"
 UBOOT_MACHINE_omap-3430sdp = "omap3430sdp_config"
 UBOOT_MACHINE_omap-3630sdp = "omap3630sdp_config"
 UBOOT_MACHINE_zoom2 ="omap3430zoom2_config"
+UBOOT_MACHINE_zoom3 ="omap3630zoom3_config"
+
  
 S=${WORKDIR}/git
 PACKAGE_ARCH = "${MACHINE_ARCH}"
@@ -56,7 +63,10 @@ install -m 644 ${S}/include/asm-arm/arch-omap3/sys_proto.h \
 ${STAGING_INCDIR}/${PN}/asm-arm/arch-omap3/
 install -m 644 ${S}/include/asm-arm/arch-omap3/rev.h \
 ${STAGING_INCDIR}/${PN}/asm-arm/arch-omap3/
-
+if [ "${MACHINE}" = "zoom3" ]; then
+install -m 644 ${S}/include/asm-arm/arch-omap3/dpll_table_36xx.S \
+${STAGING_INCDIR}/${PN}/asm-arm/arch-omap3/
+fi
 
 install -m 644 ${S}/include/linux/byteorder/* \
 ${STAGING_INCDIR}/${PN}/linux/byteorder/
