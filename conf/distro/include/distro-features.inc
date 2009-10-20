@@ -23,7 +23,7 @@ DISTRO_FEATURES += "alsa bluetooth ext2 irda pcmcia usbgadget usbhost wifi nfs z
 DISTRO_FEATURES += "camera jpegdec jpegenc"
 
 # Enable Sorenson spark video decoder
-#DISTRO_FEATURES += "spark"
+DISTRO_FEATURES += "spark"
 
 # Enable 3D GFX module and libraries
 #DISTRO_FEATURES += "gfx"
