@@ -5,7 +5,12 @@ PR = "r1"
 DEPENDS = "tidspbridge-bios-native \
 	   tidspbridge-cgt6x-native \
 	   tidspbridge-dllcreate-native"
-FILES_${PN}="/dspbridge"
+	   
+PACKAGES = "${PN}-dev ${PN}-dbg ${PN}"
+FILES_${PN}-dbg += "/dspbridge/.debug"
+FILES_${PN} = "/dspbridge"
+
+inherit ccasefetch
 
 CCASE_SPEC = "%\
 	      element /vobs/SDS/Source/Bridge/dsp/... BRIDGE-DSP_RLS_${PV}%\
@@ -26,8 +31,6 @@ ENV_VAR = "DEPOT=${STAGING_BINDIR_NATIVE}/dspbridge/tools \
 
 SRC_URI = "file://tidspbridge.patch;patch=1"
 
-inherit ccasefetch
-
 do_compile() {
 	chmod -R +w ${S}/*
 	${ENV_VAR} oe_runmake -f gmakefile .clean
@@ -44,8 +47,9 @@ do_stage() {
 }
 
 do_install() {
-	install -d ${D}/dspbridge/exports/lib
-	install -m 0644 ${S}/ti/dspbridge/dsp/bridge_product/exports/lib/*.a64P ${D}/dspbridge/exports/lib
+	install -d ${D}/dspbridge
 	install -m 0644 ${S}/ti/dspbridge/dsp/samples/*.dof64P ${D}/dspbridge
 	install -m 0644 ${S}/ti/dspbridge/dsp/qos/*.dll64P ${D}/dspbridge
+	install -d ${D}/dspbridge/exports/lib
+	install -m 0644 ${S}/ti/dspbridge/dsp/bridge_product/exports/lib/*.a64P ${D}/dspbridge/exports/lib
 }

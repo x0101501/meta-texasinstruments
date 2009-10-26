@@ -12,5 +12,6 @@ RDEPENDS = "\
     tidspbridge-lib \
     tidspbridge-mpusamples \
     tidspbridge-extra \
+    tidspbridge-samples-dsp \
     baseimage \
     "

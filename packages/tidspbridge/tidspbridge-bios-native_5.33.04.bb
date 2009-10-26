@@ -15,4 +15,5 @@ do_stage() {
 	install -d ${STAGING_BINDIR}/dspbridge/tools
 	cp -a ${S}/* ${STAGING_BINDIR}/dspbridge/tools
 	chmod -R +wx ${STAGING_BINDIR}/dspbridge/tools	
+	ln -s ${STAGING_BINDIR}/dspbridge/tools ${STAGING_BINDIR}/dspbridge/tools/bios_5_33_04
 }
