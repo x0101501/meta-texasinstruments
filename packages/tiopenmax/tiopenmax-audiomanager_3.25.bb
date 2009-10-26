@@ -14,7 +14,6 @@ CCASE_PATHCOMPONENTS = 3
 CCASE_PATHCOMPONENT = "linux"
 
 SRC_URI = "file://23.11-ampthread.patch;patch=1 \
-	file://activate-apll-power-ctrl.patch;patch=1 \
 	${@base_contains("DISTRO_FEATURES", "testpatterns", "", "file://remove-patterns.patch;patch=1", d)} \
 	"
 
