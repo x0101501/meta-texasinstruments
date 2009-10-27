@@ -1,6 +1,6 @@
 SECTION = "x11/multimedia"
 PRIORITY = "optional"
-DEPENDS = "gtk+ gstreamer gnome-doc-utils intltool-native libgnomeui eds-dbus"
+DEPENDS = "gtk+ gstreamer gnome-doc-utils intltool-native libgnomeui eds-dbus hal"
 #DEPENDS = "gtk+ gstreamer gnome-doc-utils intltool-native libgnomeui"
 DESCRIPTION = "Webcam application modeled after Photobooth"
 PR = "r1"
