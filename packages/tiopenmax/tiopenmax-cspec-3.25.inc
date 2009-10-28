@@ -1,7 +1,7 @@
 CCASE_SPEC = "\
 	${@base_contains("DISTRO_FEATURES", "testpatterns", "", "element patterns /main/0", d)}%\
 	# LO Migration Patches%\
-	element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/post_processor/src/OMX_PostProc_Utils.c ACT_VIDEOL23.17RC7-DISP%\
+	element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/post_processor/src/OMX_PostProc_Utils.c ACT_VIDEOL23.17RC7-DISP-F%\
 	element /vobs/wtbu/OMAPSW_MPU/linux/video/src/openmax_il/video_decode/src/Makefile ACT_3630VIDEO-INT%\	
 
 	# OMX Audio%\
